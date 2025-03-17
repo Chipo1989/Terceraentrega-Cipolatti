@@ -1,0 +1,16 @@
+{% extends 'tareas/base.html' %}
+
+{% block content %}
+<h2>Lista de Tareas</h2>
+
+<form method="get" action="{% url 'tarea_search' %}">
+    {{ form.as_p }}
+    <button type="submit">Buscar</button>
+</form>
+
+<ul>
+    {% for tarea in tareas %}
+        <li>{{ tarea.nombre }} - {{ tarea.estado.nombre }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

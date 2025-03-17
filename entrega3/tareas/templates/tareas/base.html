@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas</title>
+</head>
+<body>
+    <header>
+        <h1>Gestión de Tareas</h1>
+        <nav>
+            <a href="{% url 'tarea_list' %}">Inicio</a> |
+            <a href="{% url 'tarea_create' %}">Crear Tarea</a> |
+            <a href="{% url 'desarrollo_create' %}">Crear Desarrollo</a> |
+            <a href="{% url 'estado_create' %}">Crear Estado Tarea</a> |
+            <a href="{% url 'tarea_search' %}">Buscar Tarea</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
